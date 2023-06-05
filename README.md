@@ -1,4 +1,4 @@
-# Light Components Library
+# X Light Angular Components Library
 
 This is the Light component library for all projects.
 
