@@ -1,8 +1,8 @@
 {
     "name": "light-components",
     "description": "Component library for the EVR Drive Admin Panel project.",
-    "version": "1.7.1",
-    "author": "Leonardo Lazarini | Tarane Talebi | Christopher Wong",
+    "version": "0.0.1",
+    "author": "Leonardo Lazarini",
     "peerDependencies": {
         "@angular/common": "^14.0.0",
         "@angular/core": "^14.0.0",

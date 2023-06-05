@@ -1,6 +1,9 @@
-# EvrComponents
+# Light Components for Angular
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+This is a simple and lightweight component library for Angular. It's still under construction and we need your help!
+##[Open Github](https://github.com/llazarini)
+
+
 
 ## Code scaffolding
 
