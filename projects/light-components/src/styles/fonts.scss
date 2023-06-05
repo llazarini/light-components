@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;700&display=swap');
+
+$font-primary: 'Open Sans';
+$font-secondary: 'Proxima-Nova';
+
+body {
+    font-family: $font-primary, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: .67rem 0
+}
+h2 {
+    font-size: 1.5rem;
+    margin: .75rem 0
+}
+h3 {
+    font-size: 1.17rem;
+    margin: .83rem 0
+}
+h5 {
+    font-size: .83rem;
+    margin: 1.5rem 0
+}
+h6 {
+    font-size: .75rem;
+    margin: 1.67rem 0
+}
+h1, h2, h3, h4,
+h5, h6 { font-weight: bolder }
+

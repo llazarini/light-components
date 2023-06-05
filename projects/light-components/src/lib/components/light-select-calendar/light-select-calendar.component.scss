@@ -1,0 +1,160 @@
+@import "../../../styles";
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+
+  &.disabled {
+    .label {
+      color: $color-grey;
+    }
+    .input {
+      border: 0.1rem solid $color-grey;
+      color: $color-grey;
+      cursor: not-allowed;
+    }
+
+    .arrow {
+      border-top: 0.5rem solid $color-grey;
+    }
+  }
+
+
+  .calendar {
+    border: .1rem solid $color-midnight-black;
+    border-top: 0;
+    display: none;
+    position: absolute;
+    padding: .4rem;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    right: 0;
+    margin: 0;
+    transform: translateY(100%);
+    background: $color-off-white;
+    border-radius: 0 0 $border-radius $border-radius;
+    border-top: 0;
+    color: $color-midnight-black;
+    font-size: .8rem;
+    line-height: 1rem;
+    max-height: 30rem;
+    overflow-y: auto;
+
+    &.opened {
+      display: block;
+    }
+
+    .header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .8rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      .buttons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: .8rem;
+        cursor: pointer;
+
+        :hover {
+          color: $color-grey-darker;
+        }
+      }
+    }
+
+    .week, .week-title {
+      display: flex;
+      flex-flow: row;
+      .day, .title {
+        display: flex;
+        flex: 1;
+      }
+      .title {
+        font-size: .5rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .day {
+        padding: .4rem;
+        text-align: center;
+        background: $color-white;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &.today {
+          background: $color-off-white;
+        }
+
+        &:hover, &.selected {
+          background: $color-primary;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .input {
+    background: $color-white;
+    min-width: 14rem;
+    width: 100%;
+    height: 2.4rem;
+    border-radius: $border-radius;
+    border: 0.1rem solid $color-midnight-black;
+    color: $color-midnight-black;
+    font-size: .8rem;
+    line-height: 1rem;
+    padding: 0 .5rem;
+    text-align: left;
+    cursor: pointer;
+
+
+    &.opened {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+  }
+
+  .label {
+    z-index: 1;
+    color: $color-midnight-black;
+    font-size: .8rem;
+    font-weight: light;
+    margin-left: .5rem;
+
+
+    &.floating {
+      margin-left: 0;
+      position: absolute;
+      background: $color-off-white;
+      padding: 0 0.8rem;
+      top: -1rem;
+      left: 0.8rem;
+    }
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    border-top: 0.3rem solid $color-midnight-black;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+
+    &.opened {
+      rotate: 180deg;
+    }
+  }
+}
+
+.errors {
+  margin-bottom: 2rem;
+}

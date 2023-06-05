@@ -1,0 +1,104 @@
+@import "../../../styles";
+
+button {
+  position: relative;
+  overflow: hidden;
+  font-size: .8rem;
+  border-radius: $border-radius;
+  border: 0;
+  line-height: 1rem;
+  cursor: pointer;
+
+  padding: .6rem 1.2rem;
+  width: 100%;
+  font-family: $font-primary;
+
+  &:hover {
+    box-shadow: 0 0 .3rem 0 rgba($color-midnight-black, .3);
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+    transition: all;
+  }
+
+  &.sm {
+    padding: .3rem 1rem;
+    font-size: .6rem;
+  }
+
+  &.lg {
+    padding: 1rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  &.black {
+    background: $color-midnight-black;
+    color: $color-white;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-midnight-black, .3);
+    }
+  }
+
+  &.outline-black {
+    background: transparent;
+    border: 0.1rem solid;
+    border-color: $color-midnight-black;
+    color: $color-midnight-black;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-midnight-black, .3);
+    }
+  }
+
+  &.outline-primary {
+    border-radius: $border-radius;
+    border: 0.1rem solid $color-primary;
+    background: #ffffff;
+    color: $color-primary;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-primary, .3);
+    }
+  }
+
+  &.outline-secondary {
+    border-radius: $border-radius;
+    border: 0.1rem solid $color-secondary;
+    background: #ffffff;
+    color: $color-secondary;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-secondary, .3);
+    }
+  }
+
+  &.primary {
+    border: 0.1rem solid $color-primary;
+    background: $color-primary;
+    color: $color-white;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-primary, .3);
+    }
+  }
+
+  &.secondary {
+    border: 0.1rem solid $color-secondary;
+    background: $color-secondary;
+    color: $color-white;
+    &:hover {
+      box-shadow: 0 0 .3rem 0 rgba($color-secondary, .3);
+    }
+  }
+
+  &.disabled {
+    background: $color-grey;
+    border: 0.1rem solid;
+    border-color: $color-grey;
+    cursor: not-allowed;
+    color: $color-white;
+    pointer-events:none;
+  }
+
+  .pressed {
+    color: $color-midnight-black;
+  }
+}

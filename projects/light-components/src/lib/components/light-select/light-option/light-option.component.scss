@@ -1,0 +1,10 @@
+@import "../../../../styles";
+
+div {
+  padding: 0 .5rem;
+
+  cursor: pointer;
+  &:hover {
+    background: #FDFDFD;
+  }
+}

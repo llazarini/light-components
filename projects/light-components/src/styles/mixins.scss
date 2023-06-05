@@ -1,0 +1,38 @@
+// Breakpoints
+$desktop-lg: 1920px;
+$desktop-md: 1280px;
+$desktop-sm: 960px;
+$tablet: 600px;
+$mobile: 375px;
+
+@mixin devices($breakpoint) {
+	@if $breakpoint == desktop-lg {
+		@media only screen and (min-width: $desktop-lg) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == desktop-md {
+		@media only screen and (min-width: $desktop-md) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == desktop-sm {
+		@media only screen and (min-width: $desktop-sm) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tablet {
+		@media only screen and (min-width: $tablet) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == mobile {
+		@media only screen and (max-width: $tablet) {
+			@content;
+		}
+	}
+}

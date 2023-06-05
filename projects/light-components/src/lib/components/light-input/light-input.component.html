@@ -1,0 +1,48 @@
+<div
+    class="container"
+    [class.disabled]="disabled"
+    [class.search]="inputType === 'search'"
+    [class.floating]="labelStyle == 'floating'"
+>
+    <div
+        class="label"
+        [ngClass]="labelClass"
+        [class.white]="labelColor === 'white'"
+        [class.floating]="labelStyle == 'floating'"
+    >
+        {{ label }}
+    </div>
+    <div class="input">
+        <input
+            #input
+            [ngClass]="inputClass"
+            [disabled]="disabled"
+            [type]="inputType === 'search' ? 'text' : inputType"
+            [(ngModel)]="value"
+            [mask]="mask"
+            [placeholder]="placeholder"
+            (ngModelChange)="change()"
+        />
+        <div class="icons">
+            <ng-content select="[icon]"></ng-content>
+            <div
+                *ngIf="type === 'password' && !disabled"
+                (click)="changeVisibility()"
+            >
+                <div
+                    icon
+                    class="evr-icon password"
+                    *ngIf="passwordVisible"
+                ></div>
+                <div
+                    icon
+                    class="evr-icon password-visible"
+                    *ngIf="!passwordVisible"
+                ></div>
+            </div>
+        </div>
+    </div>
+    <div class="errors">
+        <ng-content select="evr-input-error"></ng-content>
+    </div>
+</div>

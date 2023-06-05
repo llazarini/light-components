@@ -1,0 +1,31 @@
+@import "styles/fonts.scss";
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+body {
+	margin: 0;
+}
+
+.disable-events {
+	position: fixed;
+    pointer-events:none;
+}
+
+evra-select, evra-input {
+	input {
+		outline-color: $color-midnight-black !important;
+	}
+	&.ng-invalid.ng-touched {
+		button, input {
+			color: $color-cherry !important;
+			border-color: $color-cherry !important;
+			&:focus {
+				outline-offset: 0;
+				outline-color: $color-cherry !important;
+			}
+		}
+		.label {
+			color: $color-cherry !important;
+		}
+	}
+}

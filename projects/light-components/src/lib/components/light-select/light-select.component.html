@@ -1,0 +1,21 @@
+<div class="container"
+     [class.floating]="labelStyle == 'floating'"
+     [class.disabled]="disabled"
+     #content>
+    <div
+        class="label"
+        [class.floating]="labelStyle == 'floating'">
+        {{ label }}
+    </div>
+    <div class="arrow" [class.opened]="opened"></div>
+    <button type="button" class="input" (click)="toggle()" [class.opened]="opened">
+        {{ buttonLabel }}
+    </button>
+    <div class="list" role="listbox" aria-expanded="false" [class.opened]="opened">
+        <ng-content select="light-option"></ng-content>
+    </div>
+</div>
+
+<!--div class="errors">
+    <ng-content select="light-input-error"></ng-content>
+</div-->

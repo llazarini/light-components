@@ -1,0 +1,18 @@
+.container {
+  background: #E5E5E5;
+  padding: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .buttons {
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+    margin-bottom: 10rem;
+
+    > evr-button {
+      width: 100%;
+    }
+  }
+}

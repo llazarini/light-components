@@ -1,0 +1,19 @@
+<div class="container"
+     [class.disabled]="disabled"
+     [class.floating]="labelStyle == 'floating'"
+>
+    <div
+        class="label"
+        [ngClass]="labelClass"
+        [class.white]="labelColor === 'white'"
+        [class.floating]="labelStyle == 'floating'">
+        {{ label }}
+    </div>
+    <textarea
+        [ngClass]="inputClass"
+        [disabled]="disabled"
+        [(ngModel)]="value"
+        [placeholder]="placeholder"
+        (ngModelChange)="change()">
+    </textarea>
+</div>

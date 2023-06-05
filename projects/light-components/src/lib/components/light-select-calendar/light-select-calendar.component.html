@@ -1,0 +1,42 @@
+
+<div class="container" [class.disabled]="disabled" #content>
+    <div
+            class="label"
+            [class.floating]="labelStyle == 'floating'">
+        {{ label }}
+    </div>
+    <div class="arrow" [class.opened]="opened"></div>
+    <button type="button" class="input" (click)="toggle()" [class.opened]="opened">
+        {{ buttonLabel }}
+    </button>
+    <div class="calendar" [class.opened]="opened">
+        <div class="header">
+            <div>{{ title() }}</div>
+            <div class="buttons">
+                <div class="button" (click)="previous()">Previus</div>
+                <div class="button" (click)="next()">Next</div>
+            </div>
+        </div>
+        <div class="week-title">
+            <div class="title" *ngFor="let name of weekdays">{{ name }}</div>
+        </div>
+        <div class="week" *ngFor="let week of getWeeks()">
+            <ng-container *ngFor="let day of week">
+                <div class="day hover"
+                     (click)="select(day)"
+                     [class.selected]="daySelected(day)"
+                     [class.today]="isToday(day)">
+                    <div>{{ day }}</div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="errors">
+    <ng-content select="evra-input-error"></ng-content>
+</div>
+
+
+
+<ng-content select="div"></ng-content>
